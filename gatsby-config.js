@@ -4,10 +4,39 @@ module.exports = {
     title: "prea-site-gatsby",
   },
   plugins: [
+    // {
+    //   resolve: 'gatsby-source-wordpress',
+    //   options: {
+    //     url: 'https://website-v2-0.ey.r.appspot.com/graphql',
+    //     schema: {
+    //       typePrefix: 'WP',
+    //     },
+    //     develop: {
+    //       hardCacheMediaFiles: true,
+    //     },
+    //     type: {
+    //       Post: {
+    //         limit: process.env.NODE_ENV === 'development' ? 400 : 10_000,
+    //       },
+    //     },
+    //   },
+    // },
     {
-      resolve: "gatsby-source-wordpress",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        url: "",
+        name: 'assets',
+        path: `${__dirname}/static/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-fresnel',
+      options: {
+        breakpoints: {
+          sm: 375,
+          md: 768,
+          lg: 1070,
+          xl: 1260,
+        },
       },
     },
     "gatsby-plugin-styled-components",

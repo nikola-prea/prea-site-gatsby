@@ -1,0 +1,31 @@
+@import "../vars";
+@import "mixins";
+
+
+.headline {
+
+    @each $breakpoint, $x in $breakpoints {
+        @include breakpoint('sm') {
+            font-style: map-deep-get($headline, 'size-1', 'sm', "fontStyle");
+            font-weight: map-deep-get($headline, 'size-1', 'sm', "fontWeight");
+            line-height: map-deep-get($headline, 'size-1', 'sm', "lineHeight");
+            font-size: map-deep-get($headline, 'size-1', 'sm', "fontSize");
+        }
+    }
+
+    @each $size, $x in $headline {
+
+        &.#{$size} {
+            @each $breakpoint, $x in $breakpoints {
+                @include breakpoint($breakpoint) {
+                    font-style: map-deep-get($headline, $size, $breakpoint, "fontStyle");
+                    font-weight: map-deep-get($headline, $size, $breakpoint, "fontWeight");
+                    line-height: map-deep-get($headline, $size, $breakpoint, "lineHeight");
+                    font-size: map-deep-get($headline, $size, $breakpoint, "fontSize");
+                }
+            }
+        }
+
+    }
+
+}

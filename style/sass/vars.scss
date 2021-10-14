@@ -1,0 +1,200 @@
+// general / misc
+$breakpoints: (
+    sm: 0,
+    md: 768,
+    lg: 1070,
+    xl: 1192
+);
+$media-direction: min;
+$borderRadius: (
+    sm: 10, // in pixel
+    md: 10, // in pixel
+    lg: 10, // in pixel
+    xl: 10, // in pixel
+);
+$containedWidth: (
+    sm: 1280, // in pixel
+    md: 1280, // in pixel
+    lg: 1280, // in pixel
+    xl: 1280, // in pixel
+);
+
+
+
+// typo
+$headline: (
+    size-1: (
+        sm: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 68,
+            fontSize: 58,
+        ),
+        md: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 68,
+            fontSize: 58,
+        ),
+        lg: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 68,
+            fontSize: 58,
+        ),
+        xl: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 68,
+            fontSize: 58,
+        )
+    ),
+    size-2: (
+        sm: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 58,
+            fontSize: 48,
+        ),
+        md: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 58,
+            fontSize: 48,
+        ),
+        lg: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 58,
+            fontSize: 48,
+        ),
+        xl: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 58,
+            fontSize: 48,
+        )
+    ),
+    size-3: (
+        sm: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 48,
+            fontSize: 38,
+        ),
+        md: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 48,
+            fontSize: 38,
+        ),
+        lg: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 48,
+            fontSize: 38,
+        ),
+        xl: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 48,
+            fontSize: 38,
+        )
+    ),
+    size-4: (
+        sm: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 42,
+            fontSize: 32,
+        ),
+        md: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 42,
+            fontSize: 32,
+        ),
+        lg: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 42,
+            fontSize: 32,
+        ),
+        xl: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 42,
+            fontSize: 32,
+        )
+    ),
+    size-5: (
+        sm: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 34,
+            fontSize: 24,
+        ),
+        md: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 34,
+            fontSize: 24,
+        ),
+        lg: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 34,
+            fontSize: 24,
+        ),
+        xl: (
+            fontStyle: normal,
+            fontWeight: 600,
+            lineHeight: 34,
+            fontSize: 24,
+        )
+    )
+);
+
+// grid
+$grid: (
+    sm: (
+        columns: 12,
+        maxWidth: 1440, // in pixel
+        width: 100, // in percentage
+        gutterSpace: 20, // in pixel
+    ),
+    md: (
+        columns: 12,
+        maxWidth: 1440, // in pixel
+        width: 100, // in percentage
+        gutterSpace: 20, // in pixel
+    ),
+    lg: (
+        columns: 12,
+        maxWidth: 1440, // in pixel
+        width: 100, // in percentage
+        gutterSpace: 20, // in pixel
+    ),
+    xl: (
+        columns: 12,
+        maxWidth: 1440, // in pixel
+        width: 100, // in percentage
+        gutterSpace: 20, // in pixel
+    )
+);
+
+// fade
+$fade: (
+    sm: (
+        height: 220 // in pixel
+    ),
+    md: (
+        height: 220 // in pixel
+    ),
+    lg: (
+        height: 220 // in pixel
+    ),
+    xl: (
+        height: 220 // in pixel
+    )
+);

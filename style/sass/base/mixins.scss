@@ -1,0 +1,23 @@
+@import "../vars";
+
+@mixin breakpoint($breakpoint,$direction: $media-direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (#{$direction}-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
+    @else if unitless($breakpoint) {
+        $breakpoint: $breakpoint + 0px;
+        @media (#{$direction}-width: $breakpoint) {
+            @content;
+        }
+    }
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+

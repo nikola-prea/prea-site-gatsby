@@ -1,0 +1,100 @@
+@import "../vars";
+@import "mixins";
+
+
+.pr-grid-container {
+    display: grid;
+    margin: 0 auto;
+
+    @each $breakpoint, $x in $breakpoints {
+        @include breakpoint($breakpoint) {
+            max-width: map-deep-get($grid, $breakpoint, "maxWidth") + px;
+            width: percentage(map-deep-get($grid, $breakpoint, "width"));
+            grid-template-columns: repeat(map-deep-get($grid, $breakpoint, "columns"), 1fr);
+            grid-gap: map-deep-get($grid, $breakpoint, "gutterSpace") + px;
+        }
+    }
+
+    &.full-h {
+        height: 100%;
+    }
+
+    &.full-w {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    &.contained {
+        @each $breakpoint, $x in $breakpoints {
+            @include breakpoint($breakpoint) {
+                width: map-deep-get($containedWidth, $breakpoint) + px;
+            }
+        }
+    }
+
+    &.nom {
+        margin: 0;
+    }
+
+    &.aspect {
+        .pr-grid-item {
+            aspect-ratio: 1;
+        }
+    }
+
+    .pr-grid-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: transparent;
+
+        @each $breakpoint, $x in $breakpoints {
+            @include breakpoint($breakpoint) {
+                border-radius: map-deep-get($borderRadius, $breakpoint) + px;
+            }
+        }
+
+        &.full-img {
+            align-content: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            display: flex;
+        }
+
+        &.no-radius {
+            border-radius: 0;
+        }
+
+        .pr-grid-container {
+            margin: 0;
+        }
+
+        @each $breakpoint, $x in $breakpoints {
+            @include breakpoint($breakpoint) {
+                @for $i from 1 through map-deep-get($grid, $breakpoint, "columns") {
+                    &.sp-#{$i} {
+                        grid-column: span $i;
+                    }
+                }
+            }
+        }
+
+        &.aspect {
+            aspect-ratio: 1;
+        }
+
+        &.no-aspect {
+            aspect-ratio: 0;
+        }
+
+    }
+
+}

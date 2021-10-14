@@ -1,0 +1,63 @@
+const lightTheme = {
+  global: {
+    bgMain: 'white',
+    colorMain: 'black',
+    subColor: '#212121',
+    bgNavbar: '#fff',
+    breadcrumbIconColor: '#ccc',
+    copyTextColor: '#222224',
+    headerBgColor: '#fff',
+    footerTextColor: '#222224',
+    socialBG: '#a0a0a0',
+    footerHRColor: '#ccc',
+    footerLinkHR: 'var(--moon-D4)',
+    footerLinkColor: 'var(--moon-D4)',
+    footerLinkHover: 'var(--moon-D6)',
+    salutationColor: '#4d4d4d',
+    salutationButtonBackground: '#fff',
+    svgFill: '#000',
+    svgStroke: '#dadada',
+
+    menuTextColor: 'var(--moon-D2)',
+    footerBG: '#EFEFEF',
+    cardBG: 'var(--moon-W)',
+    headingColor: 'var(--moon-D6)',
+    paragraphColor: 'var(--moon-D6)',
+    linkColor: 'var(--sky-M)',
+    smallColor: 'var(--moon-D6)',
+    buttonDisabledBackground: 'var(--sky-L2)',
+  },
+};
+
+const darkTheme = {
+  global: {
+    bgMain: 'black',
+    colorMain: 'white',
+    subColor: 'white',
+    bgNavbar: '#212121',
+    breadcrumbIconColor: '#333',
+    copyTextColor: '#fff',
+    headerBgColor: '#1D1D1F',
+    footerTextColor: '#fff',
+    socialBG: '#333',
+    footerHRColor: '#4c4c4c',
+    footerLinkColor: 'var(--moon-M)',
+    footerLinkHover: 'var(--moon-M)',
+    footerLinkHR: 'var(--moon-M)',
+    salutationText: '#fff',
+    salutationButtonBackground: '#fff',
+    svgFill: '#dadada',
+    svgStroke: '#000',
+
+    menuTextColor: 'var(--moon-L2)',
+    footerBG: '#0B0D0F',
+    cardBG: 'var(--moon-S2)',
+    headingColor: 'var(--moon-L6)',
+    linkColor: 'var(--sky-L1)',
+    paragraphColor: 'var(--moon-D6)',
+    smallColor: 'var(--moon-L6)',
+    buttonDisabledBackground: 'var(--sky-L3)',
+  },
+};
+
+module.exports = { lightTheme, darkTheme };
